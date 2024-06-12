@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>언팔 확인</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.min.css" />
+</head>
+<body>
+    <div class="css-file-input">
+        <div class="css-follower-file-input">
+            <h2 class="file-input-guide">1. 팔로워 파일을 선택하세요. <span>(followers_1.json)</span></h2>
+            <span class="css-filename css-follower-filename">선택된 파일이 없습니다.</span>
+            <label for="follower-box" class="css-file-select-btn">파일 선택</label>
+            <input type="file" class="js-follower-file" id="follower-box" hidden accept=".json">
+        </div>
+        <div class="css-following-file-input">
+            <h2 class="file-input-guide">2. 팔로잉 파일을 선택하세요. <span>(following.json)</span></h2>
+            <span class="css-filename css-following-filename">선택된 파일이 없습니다.</span>
+            <label for="following-box" class="css-file-select-btn">파일 선택</label>
+            <input type="file" class="js-following-file" id="following-box" hidden accept=".json">
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
