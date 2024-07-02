@@ -15,11 +15,12 @@ body {
 }
 
 .css-file-input {
-    outline: 2.5px dashed #1A2130;
+    outline: 2.5px solid #1A2130;
     background: #ffffff;
     width: 600px;
     height: 400px;
     border-radius: 10px;
+    box-shadow: 10px 10px 100px -50px rgba(0,0,0,0.75);
 }
 
 .css-follower-file-input .js-follower-filename {
