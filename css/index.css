@@ -5,6 +5,10 @@
     font-family: 'Pretendard';
 }
 
+a {
+    color: #000000;
+}
+
 body {
     display: flex;
     width: 100vw;
@@ -15,6 +19,7 @@ body {
 }
 
 .css-file-input {
+    overflow: scroll;
     outline: 2.5px solid #1A2130;
     background: #ffffff;
     width: 600px;
@@ -67,4 +72,12 @@ body {
 .css-file-select-btn:where(:hover, :focus) {
     transition: .5s;
     background: #555555;
+}
+
+.js-submit-json {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
 }
