@@ -88,14 +88,23 @@ submitBtn.addEventListener("click", function() {
         return
     }
 
-    const checkedValue = findUniqueValues(followingList, followerList)
+    const checkedValue_unfollowed = findUniqueValues(followingList, followerList)
+    const checkedValue_userNotFollowing = findUniqueValues(followerList, followingList)
 
     let temp = ``
 
-    for (const user of checkedValue) {
-        temp += `<div class="js-unfollower" style="margin-left: 10px; margin-top: 10px; width: 550px; height: 30px; font-size: 18px; border: 1px solid #000000; border-radius: 5px; vertical-align: middle; line-height: 30px; padding-left: 10px;">
+    for (const user of checkedValue_unfollowed) {
+        temp += `<div class="js-unfollower" style="margin-left: 10px; margin-top: 10px; width: 550px; height: 30px; font-size: 18px; border: 1px solid #000000; border-radius: 5px; vertical-align: middle; line-height: 30px; padding-left: 10px; color: #FF0000;">
                 <a href="https://www.instagram.com/${user}" target="_blank">@${user}</a>
                 <span>상대가 팔로우하지 않습니다.</span>
+            </div>
+        `
+    }
+
+    for (const user of checkedValue_userNotFollowing) {
+        temp += `<div class="js-unfollower" style="margin-left: 10px; margin-top: 10px; width: 550px; height: 30px; font-size: 18px; border: 1px solid #000000; border-radius: 5px; vertical-align: middle; line-height: 30px; padding-left: 10px; color: #00FF00;">
+                <a href="https://www.instagram.com/${user}" target="_blank">@${user}</a>
+                <span>유저가 팔로우하지 않습니다.</span>
             </div>
         `
     }
