@@ -4,19 +4,26 @@ followerFileName = document.querySelector(".css-follower-filename"),
 followingFileName = document.querySelector(".css-following-filename"),
 container = document.querySelector(".css-file-input")
 
+function getUsername(item) {
+    if (item.string_list_data?.[0]?.value) {
+        return item.string_list_data[0].value
+    }
+    return item.title
+}
+
 function findUniqueValues(arr1, arr2) {
     // Extract values from array2 for comparison
-    const values2 = arr2.map(item => item.string_list_data[0].value);
+    const values2 = arr2.map(item => getUsername(item));
 
     console.log(values2)
 
     // Filter out values from array1 that are not in array2
     const uniqueValues = arr1.filter(item => {
         // console.log(item)
-        return !values2.includes(item.string_list_data[0].value)
+        return !values2.includes(getUsername(item))
     });
 
-    const result = uniqueValues.map(item => item.string_list_data[0].value)
+    const result = uniqueValues.map(item => getUsername(item))
 
     return result;
 }
